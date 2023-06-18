@@ -39,9 +39,9 @@
       ansible.builtin.debug:
         msg: "{{ URL }}"
 
-- name: Play for ansible facts
+- name: play for facts vars
   hosts: all
   tasks:
-    ansible.builtin.debug:
-      msg: "Host name is - {{ ansible_hostname }} "
-
+    - name: facts printing
+      ansible.builtin.debug:
+        msg: " {{ ansible_hostname }} is hostname of server"
