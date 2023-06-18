@@ -49,3 +49,10 @@
     - name: printing out
       ansible.builtin.debug:
         msg: "{{ out }}"
+
+- name: play for std var
+  hosts: localhost
+  tasks:
+    - name: task for std var
+      ansible.builtin.set_fact:
+        status: "{{ out.cmd }}"
