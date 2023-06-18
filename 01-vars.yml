@@ -43,5 +43,5 @@
   hosts: all
   tasks:
     ansible.builtin.debug:
-      msg: "{{ ansible_distribution }} - is os "
+      msg: "{{ ansible_machine }} - is os "
 
