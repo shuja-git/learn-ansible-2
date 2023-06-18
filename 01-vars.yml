@@ -43,5 +43,5 @@
   hosts: all
   tasks:
     ansible.builtin.debug:
-      msg: "{{ ansible_hostname }} - is os "
+      msg: "Host name is - {{ ansible_hostname }} "
 
