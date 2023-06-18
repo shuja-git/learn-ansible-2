@@ -15,3 +15,12 @@
         URL: task.example.com
       ansible.builtin.debug:
         msg: "{{ URL }}"
+
+- name: Play for vars from file
+  hosts: localhost
+  vars_files:
+    - var.yml
+  tasks:
+    - name: vars from file
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
