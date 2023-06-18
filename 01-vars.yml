@@ -24,3 +24,10 @@
     - name: vars from file
       ansible.builtin.debug:
         msg: "{{ URL }}"
+
+- name: Play level vars
+  hosts: localhost
+  tasks:
+    - name: vars from inventory file
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
