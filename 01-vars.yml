@@ -31,3 +31,10 @@
     - name: vars from inventory file
       ansible.builtin.debug:
         msg: "{{ URL }}"
+
+- name: play for command line vars
+  hosts: localhost
+  tasks:
+    - name: task for cli vars
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
