@@ -25,12 +25,12 @@
       ansible.builtin.debug:
         msg: "{{ URL }}"
 
-- name: Play Inventory vars
+- name: Play facts vars
   hosts: all
   tasks:
-    - name: vars from inventory file
+    - name: vars from facts file
       ansible.builtin.debug:
-        msg: "{{ URL }}"
+        msg: "{{ URL }},{{ ansible_hostname }} is hostname of server "
 
 - name: play for command line vars
   hosts: localhost
@@ -39,9 +39,3 @@
       ansible.builtin.debug:
         msg: "{{ URL }}"
 
-- name: play for facts vars
-  hosts: all
-  tasks:
-    - name: facts printing
-      ansible.builtin.debug:
-        msg: " {{ ansible_hostname }} is hostname of server"
