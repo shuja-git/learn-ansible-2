@@ -38,3 +38,10 @@
     - name: task for cli vars
       ansible.builtin.debug:
         msg: "{{ URL }}"
+
+- name: Play for ansible facts
+  hosts: all
+  tasks:
+    ansible.builtin.debug:
+      msg: "{{ ansible_distribution }} - is os "
+
